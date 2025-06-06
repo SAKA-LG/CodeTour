@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./src/asset/book.png" type="image/png" />
+    <title>CodeTour</title>
+
+    <!-- Tailwind & DaisyUI CDN -->
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/input.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./style/style-main.css" />
+  </head>
+
+  <body class="bg-gray-900 text-white min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 w-full bg-gray-900 text-white shadow-md border-b-2 border-gray-500">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="#" class="flex items-center space-x-2">
+            <img src="/src/asset/pin.png" alt="Logo" class="h-10 w-10" />
+            <span class="text-2xl sm:text-3xl font-bold">CodeTour</span>
+          </a>
+
+          
+          <div class="hidden md:flex space-x-8 text-lg">
+            <a href="index.html" class="hover:text-amber-300">Home</a>
+            <a href="#" class="hover:text-amber-300">Docs</a>
+            <a href="#" class="hover:text-amber-300">Build</a>
+            <a href="#" class="hover:text-white flex transition">Shop <img id="shopCart" src="/src/asset/shopping_cart_24dp_FFF_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+          </div>
+
+          
+          <div class="hidden md:flex items-center space-x-4">
+            <img src="https://unpkg.com/pixelarticons@1.8.1/svg/notification.svg" alt="Notif" class="w-6 h-6 invert" />
+            <img id="img-profile"
+            src="/src/img/222.jpg" 
+            alt="Profile" 
+            class="profil w-10 h-10 rounded-full object-cover" 
+            />
+            <a href="/html/payment.html" class="bg-amber-300 hover:bg-amber-400 text-black px-3 py-1 rounded-md shadow active:translate-y-0.5 transition">
+              Join Group
+            </a>
+          </div>
+
+          <div class="md:hidden">
+            <button id="mobile-menu-btn" class="focus:outline-none">
+              <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-gray-800 text-base">
+        <a href="#" class="block py-2 hover:text-amber-300">Home</a>
+        <a href="#" class="block py-2 hover:text-amber-300">Docs</a>
+        <a href="#" class="block py-2 hover:text-amber-300">Build</a>
+        <a href="#" class="block py-2 hover:text-amber-300">Objective</a>
+        <a href="#" class="block py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700">Let's CodeTour</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex flex-col md:flex-row items-center justify-center text-center md:text-left mt-32 gap-10 px-6">
+      <img class="w-64 sm:w-72 md:w-80 -rotate-6 slide-Left nitendo" src="/src/img/nitendo.png" alt="Nitendo Image" />
+      <div class="slide-right">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight up">
+          Fun place to <br class="hidden sm:block" /> Learn Tech Stack
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-gray-300 buble">
+          CodeTour is a most powerful tech stack study. <br />
+          You can explore other side world and do coding. <br />
+          Most used languages: <span class="text-amber-300">JavaScript</span>,
+          <span class="text-red-500">Java</span>,
+          <span class="text-gray-400">Python</span>,
+          <span class="text-blue-400">CSS</span>, etc.
+        </p>
+      </div>
+    </main>
+
+    <div class="text-center mt-36 font-bold text-5xl">
+        <h1 class="">Meet our Team</h1>
+    </div>
+    <div class="text-center mt-5">
+        <span class="text-lg text-blue-200">Behind CodeTour, have litle junior
+                developer beginner in indonesia.
+            <br>Ready for pasrticipate our company.</span>
+    </div>
+
+    <div class="flex gap-20 justify-center mt-20">
+        <div class="columns-1">
+        <img class="w-52 h-52" src="/src/img/@ISAKA.png" alt="developer">
+        <h1 class="ml-7 mt-5">Stack <span class="text-red-500">developer</span><br>
+        graphic designer <br>
+        <div class="flex mt-2 gap-3">
+        <a href="https://github.com/SAKA-LG">
+        <img class="w-8 h-8 hover" src="/src/asset/github.png" alt="GitHub">
+        </a>
+        <a href="https://www.instagram.com/mipanzuzuzuz123/">
+        <img class="w-8 h-8 hover" src="/src/asset/instagram.png" alt="instagram">
+        </a>
+        <img class="w-8 h-8 hover cursor-pointer" src="/src/asset/linkend.png" alt="linkend">
+        </div>
+        </h1>
+        </div>
+        <div class="columns-1">
+        <img class="w-52 h-52" src="/src/img/@SELEM.png" alt="team suport">
+        <h1 class="ml-7 mt-5">Team Suport
+        <span class="text-amber-300">Mascot</span><br>
+        <img class="w-8 h-8 justify-center cursor-pointer justify-self-center mt-4 hover" src="/src/asset/instagram.png" alt="instagram">
+        </h1>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h1 class="text-3xl font-bold mt-20">thank's   For
+        </h1>
+    </div>
+
+    <div class="flex gap-10 justify-center mt-20">
+        <img class="w-25 h-10 cursor-pointer hover:brightness-50" src="/src/img/microsoft.png" alt="microsoft">
+        <img class="w-25 h-10 cursor-pointer hover:brightness-50" src="/src/img/codex.png" alt="Codedex">
+    </div>
+
+    <div class="text-center mt-20 mb-20">
+       <h1 class="text-4xl text-gray-500">Made With brain and Loves alot's off.</h1> 
+    </div>
+
+    <footer class="bg-[#0B0C2A] py-12 text-white">
+      <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-lg px-6">
+        <div>
+          <h4 class="font-bold mb-2">COMPANY</h4>
+          <a href="about.html" class="block hover:underline">About</a>
+          <a href="/html/404.html" class="block hover:underline">Blog</a>
+          <a href="/html/shop.html" class="block hover:underline">Shop</a>
+          <a href="/html/404.html" class="block hover:underline">Community</a>
+          <a href="#" class="block hover:underline">Help Center</a>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">PRACTICE</h4>
+          <a href="#" class="block hover:underline">Challenges</a>
+          <a href="#" class="block hover:underline">Projects</a>
+          <a href="#" class="block hover:underline">#30NitesOfCode</a>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">LEARN</h4>
+          <a href="#" class="block hover:underline">Python</a>
+          <a href="#" class="block hover:underline">JavaScript</a>
+          <a href="#" class="block hover:underline">React</a>
+          <a href="#" class="block hover:underline">SQL</a>
+          <a href="#" class="block hover:underline">HTML</a>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2 invisible md:visible">&nbsp;</h4>
+          <a href="#" class="block hover:underline">Git & GitHub</a>
+          <a href="#" class="block hover:underline">Command Line</a>
+          <a href="#" class="block hover:underline">p5.js</a>
+          <a href="#" class="block hover:underline">C++</a>
+          <a href="#" class="block hover:underline">Java</a>
+        </div>
+      </div>
+      <div class="text-center text-sm mt-8 text-gray-500">© 2025 CodeTour, Inc. · <a href="#" class="underline">Terms</a> · <a href="#" class="underline">Privacy Policy</a></div>
+    </footer> 
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

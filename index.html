@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./src/asset/book.png" type="image/png" />
+    <title>CodeTour</title>
+    <!-- *CDN -->
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/input.css">
+    
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- * CSS -->
+    <link rel="stylesheet" href="./style/style-main.css" />
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- *FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  </head>
+<body class="bg-gray-900 hidden">
+<nav class="fixed top-0 left-0 right-0 z-50 w-full bg-gray-900 text-white shadow-md border-b-2 border-gray-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-3 lg:px-8"> 
+    <div class="flex justify-between h-16 items-center">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="/src/asset/pin.png" alt="Codedex Logo" class="icons h-10 w-10" />
+        <span class="font-bold text-3xl rounded-2xl tracking-wide">CodeTour</span>
+      </a>
+
+      <div class="hidden md:flex space-x-10 font-medium text-gray-300 text-2xl"> 
+        <a href="index.html" class="hover:text-white transition">Home</a>
+        <a href="/html/404.html" class="hover:text-white transition">Docs</a>
+        <a href="/html/build.html" class="hover:text-white transition">Build</a>
+        <a href="#" class=" hover:text-white flex transition">Shop <img id="shopCart" src="/src/asset/shopping_cart_24dp_FFF_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+      </div>
+        <div class="hidden md:flex items-center space-x-4">
+    <img 
+        src="https://unpkg.com/pixelarticons@1.8.1/svg/notification.svg" 
+        alt="Notification" 
+        class="w-8 h-8 filter invert" 
+    />
+    <img id="img-profile"
+        src="/src/img/222.jpg" 
+        alt="Profile" 
+        class="profil w-10 h-10 rounded-full object-cover" 
+    />
+            <a
+    href="/html/payment.html"
+    class="bg-amber-300 hover:bg-amber-400 text-black px-3 py-1 rounded-md  text-1xl transition-transform transform shadow-[0_6px_0_#b45309] active:translate-y-1 active:shadow-[0_2px_0_#b45309]"
+    >
+  Join Group
+</a>
+    </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="focus:outline-none">
+          <svg
+            class="w-8 h-8 text-gray-300"  <!-- ikon lebih besar -->
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden px-4 pb-6 space-y-3 bg-gray-800 text-lg"
+  >
+    <a href="#" class="block py-3 text-gray-300 hover:text-white">Home</a>
+    <a href="#" class="block py-3 text-gray-300 hover:text-white">About</a>
+    <a href="#" class="block py-3 text-gray-300 hover:text-white">Docs</a>
+    <a href="#" class="block py-3 text-gray-300 hover:text-white">Contact</a>
+    <a
+      href="#"
+      class="block py-3 bg-blue-600 text-white rounded-md text-center hover:bg-blue-700"
+      >Let's CodeTour</a
+    >
+  </div>
+</nav>
+
+  <div class="grid grid-cols-1 pt-16 lg:grid-cols-3 gap-6 max-w-7xl mx-auto p-6">
+
+    <div class="lg:col-span-2 space-y-10 rounded-3xl">
+      <div class="p-4 flex items-center rounded-3xl gap-4">
+        <img class="w-15 h-15" src="/src/img/bot.webp" alt="bot">
+        <p id="typed-text" class="border-2 rounded-b-xl p-2 text-2xl"></p>
+      </div>
+
+      <div class="relative bg-cover bg-center h-70 rounded-lg overflow-hidden" style="background-image: url('/src/img/koi.gif');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative p-6">
+          <p class="mb-2 text-2xl text-gray-300">COURSE</p>
+          <h2 class="text-3xl font-bold text-white">Your Activity</h2>
+          <p class="text-sm text-gray-200 text-3xl mb-4">Next exercise: Pack Your Bags</p>
+          <button id="learning" class="bg-amber-500 hover:bg-amber-400 text-black px-6 py-3 font-medium rounded-md  text-2xl transition-transform transform shadow-[0_6px_0_#b45309] active:translate-y-1 active:shadow-[0_2px_0_#b45309]">Continue Learning</button>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Explore more</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 text-2xl gap-2">
+          <div class="border-2 border-gray-500 p-2 rounded">🧠 Challenge Packs</div>
+          <div class="border-2 border-gray-500 p-2 rounded">🎲 Project Tutorials</div>
+          <div class="border-2 border-gray-500 p-2 rounded">🔎 #30NitesOfCode</div>
+          <div class="border-2 border-gray-500 p-2 rounded">👾 Builds</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-6 mt-16">
+      <div class="border-2 border-gray-500 p-4 rounded-lg text-center">
+        <img class="w-10 h-10 justify-center justify-self-center" src="/src/img/foxboy.gif" alt="boy">
+        <h4 id="name" class="text-lg font-bold"></h4>
+        <p>Level 1</p>
+        <div class="flex justify-around mt-4 text-sm">
+          <div id="xp">⭐ 20 XP</div>
+          <div id="rank">🥉 Bronze</div>
+        </div>
+        <div class="mt-2">🔥Day streak</div>
+        <button id="button-View-Profile" class="mt-4 px-4 py-2 border border-white rounded hover:bg-white hover:text-black">View profile</button>
+      </div>
+
+      <div class="border-2 border-gray-500 p-4 rounded-lg">
+        <h4 class="text-lg font-bold mb-3">Upcoming Events</h4>
+        <ul class="space-y-2 text-15">
+          <li><span class="bg-yellow-400 text-black px-2 rounded">  MAY 29</span> Code Rain - 3:00pm pm</li>
+          <li><span class="bg-green-500 px-2 rounded">JUN 11</span>  Workshop public - 3:00pm am</li>
+          <li><span class="bg-red-500 px-2 rounded">JUN 26</span>  Meet 'n Greet - 3:00pm pm</li>
+        </ul>
+      </div>
+
+      <div class="border-2 border-gray-500 p-4 rounded-lg">
+        <h4 class="text-purple-400 font-bold text-2xl">Group</h4>
+        <p class="text-3xl mt-1">Get More Country <br>
+           <span class="text-xl"> 32 % Now</span>
+        </p>
+        <button id="checknow" class="mt-3 text-2xl bg-purple-500 hover:bg-purple-600 px-4 py-2 rounded">Check Now</button>
+      </div>
+    </div>
+
+    <div class="flex text-3xl mb-20 ml-20">
+        <div><h2>New Project</h2></div>
+    </div>
+    </div>
+</div>
+
+  <section class="max-w-6xl mx-auto py-12 grid grid-cols-1 md:grid-cols-3 gap-6 ml-20 -mt-20">
+    <div>
+      <img src="/src/img/timerr.gif" alt="Timer JS" class="rounded mb-4 w-70 h-58">
+      <h3 class="text-sm text-gray-400 mb-1">TUTORIAL</h3>
+      <a href="#" class="text-xl font-bold text-white hover:underline">Create a Timer Elektron</a>
+      <div class="mt-4"><span class="bg-gray-700 text-sm px-2 py-1 rounded">INTERMEDIATE</span></div>
+    </div>
+    <div>
+      <img src="/src/img/cuaca.gif" alt="Express Server" class="rounded mb-4 w-50 h-40">
+      <h3 class="text-sm text-gray-400 mb-1">TUTORIAL</h3>
+      <a href="#" class="text-xl font-bold text-white hover:underline">Use Api Weather</a>
+      <div class="mt-4 space-x-2">
+        <span class="bg-gray-700 text-sm px-2 py-1 rounded">BEGINNER</span>
+        <span class="bg-amber-500 text-sm px-2 py-1 rounded">JS</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center py-12">
+    <div class="flex justify-center items-start gap-4 mb-6">
+      
+    </div>
+    <h2 class="text-3xl font-bold mb-4">Invite a Friend</h2>
+    <img class="justify-center justify-self-center w-70 h-50 mb-5" src="/src/img/all-pets.gif" alt="all-pet">
+    <form class="flex justify-center items-center gap-2">
+      <input type="email" placeholder="Your friend's email" class="mt-15 px-4 py-2 rounded-md bg-white text-black w-64">
+      <button class="bg-lime-400 text-black px-4 py-2 rounded-md font-semibold">Send Invite</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0B0C2A] py-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-lg">
+      <div class="ml-10">
+        <h4 class="font-bold mb-2">COMPANY</h4>
+        <a href="about.html" class="block hover:underline">About</a>
+        <a href="/html/404.html" class="block hover:underline">Blog</a>
+        <a href="/html/shop.html" class="block hover:underline">Shop</a>
+        <a href="/html/404.html" class="block hover:underline">Community</a>
+        <a href="#" class="block hover:underline">Help Center</a>
+      </div>
+      <div>
+        <h4 class="font-bold mb-2">PRACTICE</h4>
+        <a href="#" class="block hover:underline">Challenges</a>
+        <a href="#" class="block hover:underline">Projects</a>
+        <a href="#" class="block hover:underline">#30NitesOfCode</a>
+      </div>
+      <div>
+        <h4 class="font-bold mb-2">LEARN</h4>
+        <a href="#" class="block hover:underline">All Courses</a>
+        <a href="#" class="block hover:underline">Python</a>
+        <a href="#" class="block hover:underline">Intermediate Python</a>
+        <a href="#" class="block hover:underline">NumPy</a>
+        <a href="#" class="block hover:underline">SQL</a>
+        <a href="#" class="block hover:underline">HTML</a>
+        <a href="#" class="block hover:underline">CSS</a>
+      </div>
+      <div>
+        <h4 class="font-bold mb-2 invisible md:visible">&nbsp;</h4>
+        <a href="#" class="block hover:underline">JavaScript</a>
+        <a href="#" class="block hover:underline">React</a>
+        <a href="#" class="block hover:underline">Command Line</a>
+        <a href="#" class="block hover:underline">Git & GitHub</a>
+        <a href="#" class="block hover:underline">p5.js</a>
+        <a href="#" class="block hover:underline">C++</a>
+        <a href="#" class="block hover:underline">Java</a>
+      </div>
+    </div>
+    <div class="text-center text-sm mt-8 text-gray-500">© 2025 CodeTour, Inc. · <a href="#" class="underline">Terms</a> · <a href="#" class="underline">Privacy Policy</a></div>
+  </footer>
+
+    <!-- todo: JS -->
+     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(()=>{
+        new Typed("#typed-text", {
+        strings: [`Hai, ${nameGet}`, "Selamat datang di CodeTour!", "senang bertemu denganmu lagi"],
+        typeSpeed: 60,
+        backSpeed: 35,
+        loop: false
+        });
+        },3500)
+    });
+</script>
+  </body>
+</html>

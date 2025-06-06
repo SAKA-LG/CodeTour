@@ -1,0 +1,55 @@
+body {
+  background-image: url('/src/img/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEwL2xhdXJhc3RlZmFubzI2Nl93b3JsZF9tYXBfcG9sa2FfZG90X3N0eWxlbm9fc2hhZG93X2lzb2xhdGVkX29uX19lZGFhMjRlMy1hMDcxLTRiYTEtOTI3Zi1jYWFiMjFkNzM2NzEuanBn\ \(1\).jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  margin-top: -20px;
+  animation: opacityess 2s ease-in-out;
+  -webkit-animation: opacityess 2s ease-in-out;
+}
+
+.ml-200 {
+    margin-left: 50em;
+    margin-top: 30px;
+}
+
+.ml-250 {
+    margin-left: 53em;
+}
+
+.ml-220 {
+    margin-left: 55em;
+}
+
+.ml-150 {
+    margin-left: 40em;
+}
+
+.hover-img{
+    transition: 0.5s;
+}
+
+.hover-img:hover {
+    -webkit-transform: scale(2.2);
+    -moz-transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    -o-transform: scale(2.2);
+    transform: scale(2.2);
+}
+
+@keyframes opacity{
+  0%{
+    opacity: 0;
+    filter: blur(2px);
+}50%{
+    opacity: 1;
+    filter: blur(2px);
+}100%{
+    opacity: 1;
+}
+}
+
+.opacityess {
+  -webkit-animation: opacity 2s ease-in-out;
+  animation: opacity 2s ease-in-out;
+}

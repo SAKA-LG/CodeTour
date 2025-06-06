@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/src/asset/nebula.png" type="image/png" />
+    <!-- CDN -->
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="stylesheet" href="/style/nebula.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nebula</title>
+    <style>
+      * {
+        background-color: rgb(42, 42, 42);
+        color: white;
+          font-family: "Poppins", sans-serif;
+      }
+
+      .nebula {
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex m-10">
+      <div>
+        <div class="drawer">
+          <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content">
+            <label for="my-drawer" class="mr-10 cursor-pointer">
+              <img
+                src="/src/asset/clear_all_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg"
+                alt=""
+              />
+            </label>
+          </div>
+          <div class="drawer-side">
+            <label
+              for="my-drawer"
+              aria-label="close sidebar"
+              class="drawer-overlay"
+            ></label>
+            <div class="menu min-h-full border-r-2 border-gray-500 w-60 p-4">
+              <div>
+                <div class="flex gap-32">
+                  <div>
+                    <img class="nebula" src="/src/asset/nebula.png" alt="" />
+                    <h2>Neb 0.1</h2>
+                  </div>
+                  <div>
+                    <img
+                      class="mt-3 cursor-pointer"
+                      aria-label="close sidebar"
+                      src="/src/asset/dataset_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="mt-10">
+                  <div class="flex">
+                    <img
+                      class="mt-5"
+                      src="/src/asset/edit_note_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                    <span class="mt-5 ml-5">Made Note for u</span>
+                  </div>
+                  <div class="flex">
+                    <img
+                      class="mt-5"
+                      src="/src/asset/photo_library_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                    <span class="mt-5 ml-5">Add image generate</span>
+                  </div>
+                  <div class="flex">
+                    <img
+                      class="mt-5"
+                      src="/src/asset/search_24dp_999999_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                    <span class="mt-5 ml-5">Serch anything</span>
+                  </div>
+                  <h1 class="text-gray-300 ml-5 mt-5">This today
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center -mt-5 justify-between w-full px-4">
+        <div class="flex">
+          <img class="w-32" src="/src/asset/nebulaltext.png" alt="" />
+          <img
+            id="speaker"
+            class="cursor-pointer hover:w-8"
+            src="/src/asset/volume_up_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+        </div>
+        <div class="flex">
+          <img
+            class="mr-5"
+            src="/src/asset/more_vert_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+          <img
+            id="img-profile"
+            src="/src/img/222.jpg"
+            alt="Profile"
+            class="w-8 h-8 cursor-pointer rounded-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="text-start" id="bot"></div>
+
+    <div class="text-end" id="user"></div>
+
+    <div class="flex items-center justify-center h-[70vh]">
+      <h1 id="haiSay" class="text-4xl font-medium">How can I help you?</h1>
+    </div>
+
+    <div
+      class="fixed bottom-4 left-1/2 ml-56 transform -translate-x-1/2 w-[90vw] max-w-md"
+    >
+      <div class="flex items-center bg-black p-5 rounded-2xl gap-2">
+        <input
+          id="input"
+          type="text"
+          placeholder="Tulis pesan..."
+          class="w-full focus:outline-none p-3 rounded-full bg-gray-950 shadow"
+        />
+        <img
+          id="button"
+          class="w-6 h-6 bg-black cursor-pointer"
+          src="/src/asset/play_arrow_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+        />
+        <img
+          class="bg-black"
+          src="/src/asset/graphic_eq_24dp_999999_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+        />
+        <img
+          class="bg-black"
+          src="/src/asset/add_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+        />
+      </div>
+      <p class="text-center text-sm text-gray-300 mt-2">
+        Nebula can make mistakes, so double check it
+        <span class="border-b">Nebula</span>
+      </p>
+    </div>
+
+    <script src="/html/systemNebula0.1/system01.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </body>
+</html>

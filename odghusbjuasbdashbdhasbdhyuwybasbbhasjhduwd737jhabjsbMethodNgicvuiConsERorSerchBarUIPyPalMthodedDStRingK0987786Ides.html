@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paymment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-6">
+
+    <div class="flex-1 bg-white p-6 rounded-xl shadow-md">
+
+      <div class="flex space-x-4 mb-6">
+        <div class="border-2 border-blue-500 rounded-xl p-4 flex-1 relative">
+          <div class="absolute -top-3 left-4 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">SAVE 40%</div>
+          <p id="bulanan" class="text-xl font-bold">66240 IDR <span class="text-sm text-gray-500">/ Bulan</span></p>
+          <p class="text-sm text-gray-500">Pembayaran Bulanan</p>
+        </div>
+        <div class="border-2 border-gray-300 rounded-xl p-4 flex-1">
+          <p id="tahunan" class="text-xl font-bold text-gray-700">107640 IDR <span class="text-sm text-gray-500">/ Bulan</span></p>
+          <p class="text-sm text-gray-500">bayaran Pertahun</p>
+        </div>
+      </div>
+
+      <h2 class="text-lg font-semibold mb-4">Metode pembayaran</h2>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm mb-1">Credit/Debit</label>
+          <input type="text" placeholder="1234 1234 1234 1234" class="w-full border rounded-md p-2" />
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal" class="h-8" />
+          <span class="text-sm text-gray-600">Paypal</span>
+        </div>
+        <div class="flex space-x-4">
+          <div class="flex-1">
+            <label class="block text-sm mb-1">Nama</label>
+            <input type="text" class="w-full border rounded-md p-2" placeholder="name"/>
+          </div>
+          <div class="flex-1">
+            <label class="block text-sm mb-1">Telphone Number</label>
+            <input type="text" class="w-full border rounded-md p-2" placeholder="62+"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/3 bg-white p-6 rounded-xl shadow-md">
+      <h2 class="text-xl font-bold mb-2">Order Musim Panas</h2>
+      <p class="text-sm text-gray-500 mb-4">CodeTour<br><span class="text-blue-500">Pembayaran Perbulan</span></p>
+
+      <div class="mb-4">
+        <input type="text" placeholder="Enter discount code" class="w-full border rounded-md p-2 mb-2" />
+        <button class="bg-gray-900 text-white px-4 py-1 text-sm rounded">Mulai</button>
+      </div>
+
+      <div class="flex justify-between mb-2">
+        <span>Plan Diskon</span>
+        <span class="text-red-500">-Rp 496800</span>
+      </div>
+      <div class="flex justify-between font-bold text-lg">
+        <span>Total Jumlah</span>
+        <span>Rp 104635.00</span>
+      </div>
+
+      <button class="w-full mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg shadow-md transition">Buat pembayaran</button>
+      <p class="text-center text-sm text-gray-400 mt-3">Jaminan 3-Hari uang kembali jika kurang memuaskan<br><span class="underline cursor-pointer">Batalkan Kapan saja</span></p>
+    </div>
+  </div>
+  <script src="/js/pament.js"></script>
+</body>
+</html>

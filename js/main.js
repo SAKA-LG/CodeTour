@@ -5,11 +5,6 @@ btn.addEventListener("click", () => {
     menu.classList.toggle("hidden");
 });
 
-const imgProfile = document.querySelector('#img-profile')
-
-imgProfile.addEventListener('click',()=> {
-    window.location.href = './profile.html'
-})
 const nameGet = localStorage.getItem('name')
 const nameLocated = document.querySelector('#name')
 nameLocated.innerHTML = nameGet
@@ -32,10 +27,23 @@ buttonProfile.addEventListener('click',()=>{
 
 
     document.getElementById('learning').addEventListener('click',()=>{
-        window.location.href = '/html/country.html'
+        window.location.href = '/html/langauge.html'
     })
 
-    const shopeCart = document.querySelector('#shopCart')
-    shopeCart.addEventListener('click',()=>{
-        shopeCart.classList.add('')
+    const send = document.querySelector('.sends')
+    send.addEventListener('click',()=>{
+        const inputs = document.querySelector('.inputss').value
+        localStorage.setItem('friend',inputs)
+        console.log(localStorage.getItem('friend'))
+        const titiles = document.querySelector('#titles')
+        setTimeout(()=>{
+            titiles.textContent = 'Succses'
+        },200)
+        setTimeout(()=>{
+            titiles.textContent = 'Invite a Friend'
+        },600)
+
+        if(inputs == ''){
+            alert('please type your corect email friend')
+        }
     })

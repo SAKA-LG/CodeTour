@@ -56,3 +56,14 @@ let getName = localStorage.getItem('name')
 nameUserIndex.textContent = getName
 locationed.textContent = getLocated
 studyed.textContent = schooll
+
+const friends = document.querySelector('#friend')
+let friendStorage = localStorage.getItem('friend')
+friends.textContent = `@ ${friendStorage}`
+const buttonProfile = document.getElementById('button-View-Profile')
+buttonProfile.classList.add('cursor-pointer')
+
+buttonProfile.addEventListener('click',()=>{
+    window.location.href = '/profile.html'
+    
+})

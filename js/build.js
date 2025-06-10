@@ -10,3 +10,4 @@ const imgProfile = document.querySelector('#img-profile')
 imgProfile.addEventListener('click',()=> {
     window.location.href = '/profile.html'
 })
+

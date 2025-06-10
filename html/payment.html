@@ -6,12 +6,9 @@
     <link rel="icon" href="./src/asset/book.png" type="image/png" />
     <title>CodeTour</title>
 
-    <!-- Tailwind & DaisyUI CDN -->
     <link href="./output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
-
-    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <!-- Custom Style -->
     <link rel="stylesheet" href="./style/style-main.css" />
   </head>
 
@@ -35,7 +31,6 @@
   </style>
 
   <body class="text-white min-h-screen flex flex-col">
-    <!-- Navbar -->
     <nav class="fixed top-0 left-0 right-0 z-50 w-full bg-gray-900 text-white shadow-md border-b-2 border-gray-500">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
@@ -44,28 +39,22 @@
             <span class="text-2xl sm:text-3xl font-bold">CodeTour</span>
           </a>
 
-          <!-- Desktop Menu -->
           <div class="hidden md:flex space-x-8 text-lg">
             <a href="/index.html" class="hover:text-amber-300">Home</a>
-            <a href="#" class="hover:text-amber-300">Docs</a>
-            <a href="#" class="hover:text-amber-300">Build</a>
-            <a href="#" class="hover:text-white flex transition">Shop <img id="shopCart" src="/src/asset/shopping_cart_24dp_FFF_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+            <a href="/html/doc.html" class="hover:text-amber-300">Docs</a>
+            <a href="/html/build.html" class="hover:text-amber-300">Build</a>
+            <a href="/html/shop.html" class="hover:text-white flex transition">Shop </a>
           </div>
 
-          <!-- Desktop Right -->
           <div class="hidden md:flex items-center space-x-4">
             <img src="https://unpkg.com/pixelarticons@1.8.1/svg/notification.svg" alt="Notif" class="w-6 h-6 invert" />
-            <img id="img-profile"
-            src="/src/img/222.jpg" 
-            alt="Profile" 
-            class="profil w-10 h-10 rounded-full object-cover" 
-            />
-            <a href="#" class="bg-amber-300 hover:bg-amber-400 text-black px-3 py-1 rounded-md shadow active:translate-y-0.5 transition">
+            <img id="button-View-Profile" src="/src/img/pixel art of a chicken using an oxygen tank.png" alt="Profile" class="profil w-10 h-10 rounded-full object-cover" />
+            <a href="/html/payment.html" class="bg-amber-300 hover:bg-amber-400 text-black px-3 py-1 rounded-md shadow active:translate-y-0.5 transition">
               Join Group
             </a>
+            <a href="/html/Nebula.html" class="text-4xl">AI</a>
           </div>
 
-          <!-- Mobile button -->
           <div class="md:hidden">
             <button id="mobile-menu-btn" class="focus:outline-none">
               <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,11 +67,12 @@
 
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-gray-800 text-base">
-        <a href="#" class="block py-2 hover:text-amber-300">Home</a>
-        <a href="#" class="block py-2 hover:text-amber-300">Docs</a>
-        <a href="#" class="block py-2 hover:text-amber-300">Build</a>
-        <a href="#" class="block py-2 hover:text-amber-300">Objective</a>
-        <a href="#" class="block py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700">Let's CodeTour</a>
+        <a href="/index.html" class="block py-2 hover:text-amber-300">Home</a>
+        <a href="/html/doc.html" class="block py-2 hover:text-amber-300">Docs</a>
+        <a href="/html/build.html" class="block py-2 hover:text-amber-300">Build</a>
+        <a href="/html/shop.html" class="hover:text-white flex transition">Shop </a>
+        <a href="/html/Nebula.html" class="hover:text-white flex transition">Nebula</a>
+        <a href="/html/langauge.html" class="block py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700">Let's CodeTour</a>
       </div>
     </nav>
 
@@ -171,7 +161,17 @@
       <div class="text-center text-sm mt-8 text-gray-500">© 2025 CodeTour, Inc. · <a href="#" class="underline">Terms</a> · <a href="#" class="underline">Privacy Policy</a></div>
     </footer>
     <!-- JS -->
+     <script>
+      // Toggle Mobile Menu
+      document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+      document.querySelector('#button-View-Profile').classList.add('cursor-pointer')
+      document.querySelector('#button-View-Profile').addEventListener('click',()=>{
+        window.location.href = '/profile.html'
+      })
+      </script>
     <script src="/js/pament.js"></script>
-    
   </body>
 </html>

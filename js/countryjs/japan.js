@@ -3,25 +3,38 @@ const slotjapan = document.getElementById("slot0")
 const saves = document.getElementById('saves')
 const bgJapan = document.getElementById("backgroundJapan")
 
-saves.addEventListener("click", () => {
-  const value = input.value;
-  slotjapan.innerHTML = value;
+let editor
+require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs' }})
+require(['vs/editor/editor.main'], function () {
+editor = monaco.editor.create(document.getElementById('editor'), {
+value: `//type Task`,
+language: 'javascript',
+theme: 'vs-dark',
+fontSize: 12,
+minimap: { enabled: false }
 })
-saves.addEventListener("click", () => {
-  const value = input.value.trim().toLowerCase();
-  
-  if (value === "transfrom = brightness-50") {
-    bgJapan.classList.add("brightness-50", "saturate-50")
-    slotjapan.innerHTML = '<span class="text-black text-lg">Hello japan</span>';
-  } else {
-    slotjapan.innerHTML = value;
-  }
 })
+
+document.getElementById('saves').addEventListener('click', function () {
+const userCode = editor.getValue()
+try {
+new Function(userCode)()
+} catch (err) {
+  alert("Error: " + err.message)
+}
+
+function resetAll() {
+  if (editor) editor.setValue('')
+}
+
+function complite() {
+  alert("Code submitted! (simulasi)")
+}
 
 function resetAll() {
   window.location.reload()
 }
-
+})
 function complite() {
   window.location.href = "/html/complite.html"
 }

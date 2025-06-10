@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./src/asset/book.png" type="image/png" />
     <title>CodeTour</title>
-
     <!-- Tailwind & DaisyUI CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
@@ -29,18 +29,18 @@
 
           <div class="hidden md:flex space-x-8 text-lg">
             <a href="index.html" class="hover:text-amber-300">Home</a>
-            <a href="#" class="hover:text-amber-300">Docs</a>
-            <a href="#" class="hover:text-amber-300">Build</a>
-            <a href="#" class="hover:text-amber-300">Company</a>
-            <a href="#" class="hover:text-white flex transition">Shop <img id="shopCart" src="/src/asset/shopping_cart_24dp_FFF_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+            <a href="/html/doc.html" class="hover:text-amber-300">Docs</a>
+            <a href="/html/build.html" class="hover:text-amber-300">Build</a>
+            <a href="/html/shop.html" class="hover:text-white flex transition">Shop</a>
           </div>
 
           <div class="hidden md:flex items-center space-x-4">
             <img src="https://unpkg.com/pixelarticons@1.8.1/svg/notification.svg" alt="Notif" class="w-6 h-6 invert" />
-            <img src="/src/img/222.jpg" alt="Profile" class="w-9 h-9 rounded-full object-cover" />
+            <img id="button-View-Profile" src="/src/img/pixel art of a chicken using an oxygen tank.png" alt="Profile" class="w-9 h-9 rounded-full object-cover" />
             <a href="#" class="bg-amber-300 hover:bg-amber-400 text-black px-3 py-1 rounded-md shadow active:translate-y-0.5 transition">
               Join Group
             </a>
+            <a href="/html/Nebula.html" class="text-4xl">AI</a>
           </div>
 
           <div class="md:hidden">
@@ -54,11 +54,12 @@
       </div>
 
       <div id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-gray-800 text-base">
-        <a href="#" class="block py-2 hover:text-amber-300">Home</a>
-        <a href="#" class="block py-2 hover:text-amber-300">Docs</a>
-        <a href="#" class="block py-2 hover:text-amber-300">Build</a>
-        <a href="#" class="hover:text-white flex transition">Shop <img id="shopCart" src="/src/asset/shopping_cart_24dp_FFF_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
-        <a href="#" class="block py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700">Let's CodeTour</a>
+        <a href="index.html" class="block py-2 hover:text-amber-300">Home</a>
+        <a href="/html/doc.html" class="block py-2 hover:text-amber-300">Docs</a>
+        <a href="/html/build.html" class="block py-2 hover:text-amber-300">Build</a>
+        <a href="/html/shop.html" class="hover:text-white flex transition">Shop</a>
+        <a href="/html/Nebula.html" class="hover:text-white flex transition">Nebula</a>
+        <a href="/html/langauge.html" class="block py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700">Let's CodeTour</a>
       </div>
     </nav>
 
@@ -71,7 +72,7 @@
         </div>
 
         <div class="relative flex justify-center">
-          <img id="profilePic" src="/src/img/IMG_3708.JPG" class="w-24 h-24 rounded-full border-4 border-[#161b22] -mt-12">
+          <img id="profilePic" src="/src/img/pixel art of a chicken using an oxygen tank.png" class="w-24 h-24 rounded-full border-4 border-[#161b22] -mt-12">
         </div>
 
         <div class="text-center px-6 mt-2">
@@ -120,6 +121,8 @@
       </div>
     </div>
 
+
+
     <div class="card p-6">
       <div class="section-title text-white text-sm">Pinned</div>
       <div class="grid-box text-gray-400 mt-4">
@@ -127,6 +130,7 @@
       </div>
     </div>
   </div>
+  
 
   <div class="card mt-6 mb-20 p-6 max-w-5xl mx-auto">
     <div class="section-title text-white text-sm">Stats</div>
@@ -177,6 +181,18 @@
         </div>
       </div>
     </div>
+
+      <section class="text-center py-12">
+    <div class="flex justify-center items-start gap-4 mb-6">
+      
+    </div>
+    <h2 class="text-3xl font-bold mb-4">yourFriend</h2>
+    <div class="flex-col justify-center justify-self-center">
+      <img class="justify-center justify-self-center" src="/src/img/step-3.gif" alt="">
+      <h1 class="text-2xl" id="friend"></h1>
+    </div>
+  </section>
+
 
     <footer class="bg-[#0B0C2A] py-12 text-white">
       <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-lg px-6">

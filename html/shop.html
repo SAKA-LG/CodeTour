@@ -30,13 +30,25 @@
         }
     </style>
 <body>
-    <div class="flex gap-60 mt-11 ml-16">
-        <div><img id="home" class="w-44" src="/src/asset/Code_Tour-removebg-preview.png" alt=""></div>
-        <div class="flex gap-10 justify-end">
-            <div><img class="up" src="/src/asset/shopping_bag_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></div>
-            <div><img class="up" src="/src/asset/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></div>
-        </div>
-    </div>
+<div class="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-20 mt-11 px-4 sm:px-16">
+  <!-- Logo -->
+   <div class="flex">
+  <div>
+    <img 
+      id="home" 
+      src="/src/asset/Code_Tour-removebg-preview.png" 
+      alt="logo" 
+      class="w-40 sm:w-60 md:w-72 lg:w-80 xl:w-96" 
+    />
+  </div>
+
+  <!-- Icons -->
+  <div class="flex gap-6 sm:gap-10 -mt-0">
+    <img class="w-8 sm:w-10" src="/src/asset/shopping_bag_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Shop" />
+    <img class="w-8 sm:w-10" src="/src/asset/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Search" />
+  </div>
+</div>
+</div><div>
 
     <section class="flex m-14 justify-center items-center mt-20">
             <div class="flex justify-center items-center flex-col sm:flex-row gap-10">
@@ -62,7 +74,7 @@
             </div>
     </section>
 
-    <div class="lex flex-col m-10 sm:flex-row gap-10">
+    <div class="flex m-14 justify-center items-center mt-20">
                     <div class="flex justify-center  flex-col sm:flex-row gap-10">
                 <div><img class="scale w-60" src="/html/Shop/sticker.png" alt="">
                 <h1 class="line mt-5 text-gray-700">Sticker Pack <br>

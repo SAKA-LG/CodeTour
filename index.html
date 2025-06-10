@@ -32,10 +32,10 @@
       </a>
 
       <div class="hidden md:flex space-x-10 font-medium text-gray-300 text-2xl"> 
-        <a href="index.html" class="hover:text-white transition">Home</a>
-        <a href="/html/404.html" class="hover:text-white transition">Docs</a>
+        <a href="/index.html" class="hover:text-white transition">Home</a>
+        <a href="/html/doc.html" class="hover:text-white transition">Docs</a>
         <a href="/html/build.html" class="hover:text-white transition">Build</a>
-        <a href="#" class=" hover:text-white flex transition">Shop <img id="shopCart" src="/src/asset/shopping_cart_24dp_FFF_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+        <a href="/html/shop.html" class=" hover:text-white flex transition">Shop</a>
       </div>
         <div class="hidden md:flex items-center space-x-4">
     <img 
@@ -43,8 +43,8 @@
         alt="Notification" 
         class="w-8 h-8 filter invert" 
     />
-    <img id="img-profile"
-        src="/src/img/222.jpg" 
+    <img id="button-View-Profile"
+        src="/src/img/pixel art of a chicken using an oxygen tank.png" 
         alt="Profile" 
         class="profil w-10 h-10 rounded-full object-cover" 
     />
@@ -54,43 +54,27 @@
     >
   Join Group
 </a>
+<a href="/html/Nebula.html" class="text-4xl">AI</a>
     </div>
-      <div class="md:hidden">
-        <button id="mobile-menu-btn" class="focus:outline-none">
-          <svg
-            class="w-8 h-8 text-gray-300"  <!-- ikon lebih besar -->
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
+       <div class="md:hidden">
+            <button id="mobile-menu-btn" class="focus:outline-none">
+              <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div
-    id="mobile-menu"
-    class="md:hidden hidden px-4 pb-6 space-y-3 bg-gray-800 text-lg"
-  >
-    <a href="#" class="block py-3 text-gray-300 hover:text-white">Home</a>
-    <a href="#" class="block py-3 text-gray-300 hover:text-white">About</a>
-    <a href="#" class="block py-3 text-gray-300 hover:text-white">Docs</a>
-    <a href="#" class="block py-3 text-gray-300 hover:text-white">Contact</a>
-    <a
-      href="#"
-      class="block py-3 bg-blue-600 text-white rounded-md text-center hover:bg-blue-700"
-      >Let's CodeTour</a
-    >
-  </div>
-</nav>
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-gray-800 text-base">
+        <a href="/index.html" class="block py-2 hover:text-amber-300">Home</a>
+        <a href="/html/doc.html" class="block py-2 hover:text-amber-300">Docs</a>
+        <a href="/html/build.html" class="block py-2 hover:text-amber-300">Build</a>
+        <a href="/html/shop.html" class="hover:text-white flex transition">Shop </a>
+        <a href="/html/Nebula.html" class="hover:text-white flex transition">Nebula</a>
+        <a href="/html/langauge.html" class="block py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700">Let's CodeTour</a>
+      </div>
+    </nav>
 
   <div class="grid grid-cols-1 pt-16 lg:grid-cols-3 gap-6 max-w-7xl mx-auto p-6">
 
@@ -131,7 +115,7 @@
           <div id="rank">🥉 Bronze</div>
         </div>
         <div class="mt-2">🔥Day streak</div>
-        <button id="button-View-Profile" class="mt-4 px-4 py-2 border border-white rounded hover:bg-white hover:text-black">View profile</button>
+        <button id="View-Profile" class="mt-4 px-4 py-2 border border-white rounded hover:bg-white hover:text-black">View profile</button>
       </div>
 
       <div class="border-2 border-gray-500 p-4 rounded-lg">
@@ -180,60 +164,55 @@
     <div class="flex justify-center items-start gap-4 mb-6">
       
     </div>
-    <h2 class="text-3xl font-bold mb-4">Invite a Friend</h2>
+    <h2 id="titles" class="text-3xl font-bold mb-4">Invite a Friend</h2>
     <img class="justify-center justify-self-center w-70 h-50 mb-5" src="/src/img/all-pets.gif" alt="all-pet">
-    <form class="flex justify-center items-center gap-2">
-      <input type="email" placeholder="Your friend's email" class="mt-15 px-4 py-2 rounded-md bg-white text-black w-64">
-      <button class="bg-lime-400 text-black px-4 py-2 rounded-md font-semibold">Send Invite</button>
-    </form>
+    <div class="flex justify-center items-center gap-2">
+      <input type="email" placeholder="Your friend's email" class="inputss mt-15 ml-5 px-4 py-2 rounded-md bg-white text-black w-64">
+      <button type="button" class="sends bg-lime-400 text-black px-4 py-2 rounded-md font-semibold">Send Invite</button>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-[#0B0C2A] py-12">
-    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-lg">
-      <div class="ml-10">
-        <h4 class="font-bold mb-2">COMPANY</h4>
-        <a href="about.html" class="block hover:underline">About</a>
-        <a href="/html/404.html" class="block hover:underline">Blog</a>
-        <a href="/html/shop.html" class="block hover:underline">Shop</a>
-        <a href="/html/404.html" class="block hover:underline">Community</a>
-        <a href="#" class="block hover:underline">Help Center</a>
+  <footer class="bg-[#0B0C2A] py-12 text-white">
+      <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-lg px-6">
+        <div>
+          <h4 class="font-bold mb-2">COMPANY</h4>
+          <a href="about.html" class="block hover:underline">About</a>
+          <a href="/html/404.html" class="block hover:underline">Blog</a>
+          <a href="/html/shop.html" class="block hover:underline">Shop</a>
+          <a href="/html/404.html" class="block hover:underline">Community</a>
+          <a href="#" class="block hover:underline">Help Center</a>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">PRACTICE</h4>
+          <a href="#" class="block hover:underline">Challenges</a>
+          <a href="#" class="block hover:underline">Projects</a>
+          <a href="#" class="block hover:underline">#30NitesOfCode</a>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">LEARN</h4>
+          <a href="#" class="block hover:underline">Python</a>
+          <a href="#" class="block hover:underline">JavaScript</a>
+          <a href="#" class="block hover:underline">React</a>
+          <a href="#" class="block hover:underline">SQL</a>
+          <a href="#" class="block hover:underline">HTML</a>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2 invisible md:visible">&nbsp;</h4>
+          <a href="#" class="block hover:underline">Git & GitHub</a>
+          <a href="#" class="block hover:underline">Command Line</a>
+          <a href="#" class="block hover:underline">p5.js</a>
+          <a href="#" class="block hover:underline">C++</a>
+          <a href="#" class="block hover:underline">Java</a>
+        </div>
       </div>
-      <div>
-        <h4 class="font-bold mb-2">PRACTICE</h4>
-        <a href="#" class="block hover:underline">Challenges</a>
-        <a href="#" class="block hover:underline">Projects</a>
-        <a href="#" class="block hover:underline">#30NitesOfCode</a>
-      </div>
-      <div>
-        <h4 class="font-bold mb-2">LEARN</h4>
-        <a href="#" class="block hover:underline">All Courses</a>
-        <a href="#" class="block hover:underline">Python</a>
-        <a href="#" class="block hover:underline">Intermediate Python</a>
-        <a href="#" class="block hover:underline">NumPy</a>
-        <a href="#" class="block hover:underline">SQL</a>
-        <a href="#" class="block hover:underline">HTML</a>
-        <a href="#" class="block hover:underline">CSS</a>
-      </div>
-      <div>
-        <h4 class="font-bold mb-2 invisible md:visible">&nbsp;</h4>
-        <a href="#" class="block hover:underline">JavaScript</a>
-        <a href="#" class="block hover:underline">React</a>
-        <a href="#" class="block hover:underline">Command Line</a>
-        <a href="#" class="block hover:underline">Git & GitHub</a>
-        <a href="#" class="block hover:underline">p5.js</a>
-        <a href="#" class="block hover:underline">C++</a>
-        <a href="#" class="block hover:underline">Java</a>
-      </div>
-    </div>
-    <div class="text-center text-sm mt-8 text-gray-500">© 2025 CodeTour, Inc. · <a href="#" class="underline">Terms</a> · <a href="#" class="underline">Privacy Policy</a></div>
-  </footer>
+      <div class="text-center text-sm mt-8 text-gray-500">© 2025 CodeTour, Inc. · <a href="#" class="underline">Terms</a> · <a href="#" class="underline">Privacy Policy</a></div>
+    </footer> 
 
     <!-- todo: JS -->
      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./js/main.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
       setTimeout(()=>{
@@ -246,5 +225,15 @@
         },3500)
     });
 </script>
+    <script>
+      document.querySelector('#button-View-Profile').classList.add('cursor-pointer')
+      document.querySelector('#button-View-Profile').addEventListener('click',()=>{
+        window.location.href = '/profile.html'
+      })
+      document.querySelector('#View-Profile').addEventListener('click',()=>{
+        window.location.href = '/profile.html'
+      })
+    </script>
+<script src="js/profile.js"></script>
   </body>
 </html>

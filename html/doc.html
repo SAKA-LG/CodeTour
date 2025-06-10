@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/src/input.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,9 +24,8 @@
       }
     </style>
   </head>
-
   <body class="bg-gray-900 text-white min-h-screen flex flex-col">
-    <nav class="fixed top-0 left-0 right-0 z-50 w-full bg-gray-900 text-white shadow-md border-b-2 border-gray-500">
+    <nav class="top-0 left-0 right-0 z-50 w-full bg-gray-900 text-white shadow-md border-b-2 border-gray-500">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <a href="#" class="flex items-center space-x-2">
@@ -69,37 +69,89 @@
       </div>
     </nav>
 
-    <div class="mt-20 md:mt-32 px-4">
-      <div class="flex flex-col md:flex-row items-center justify-center text-center gap-6">
-        <img class="glitch-swap w-48 md:w-72 rounded-2xl swap" src="/src/img/cmd.png" alt="cmdjpeg">
-        <h1 class="text-4xl md:text-6xl font-medium">
-          Think Create<br>
-          <span class="text-xl md:text-3xl">and Build our Dream</span>
-          <span class="text-amber-300 text-lg md:text-2xl"> project</span>
-        </h1>
-      </div>
+    <div class="drawer">
+  <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content ml-2 ">
+    <label for="my-drawer" class="drawer-button">
+        <img class="cursor-pointer w-10" src="/src/asset/clear_all_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+    </label>
+  </div>
+  <div class="drawer-side mt-16">
+    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+    <ul class="menu bg-gray-800  min-h-full w-80 p-4">
+      <li><a>Cdn - Code Tour</a></li>
+      <li><a>Cli - Code Tour</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="ml-6 sm:ml-32 Introduction">
+    <h1 class="text-3xl sm:text-5xl font-bold">• Introduction</h1>
+</div>
+
+<section class="ml-6 sm:ml-32 mt-10 sm:mt-20 Introduction-body">
+    <div class="intro flex flex-col sm:flex-row">
+        <div class="bg-gray-700 mr-0 sm:mr-5 rounded-b-lg mb-2 sm:mb-0">
+            <h1 class="text-2xl sm:text-3xl not-visited:p-1"># </h1>
+        </div>
+        <p class="text-2xl sm:text-3xl font-bold">What is CodeTour?</p>
+    </div>
+    <div class="mt-3 sm:mt-5">
+        <h2 class="text-xs sm:text-sm">CodeTour is most popular web to learn tech stack all language,Easy to use <br> : Did you know this web make for 3 days.</h2>
     </div>
 
-    <div class="mt-20 md:mt-40 px-4">
-      <div class="w-full max-w-xl mx-auto border-2 border-gray-600 p-6 md:p-20 bg-blue-950 rounded-lg">
-        <div class="flex justify-center">
-          <img src="/src/img/cmdpeople.gif" class="w-40 md:w-56" alt="">
+    <div class="intro flex flex-col sm:flex-row mt-10 sm:mt-20">
+        <div class="bg-gray-700 mr-0 sm:mr-5 rounded-b-lg mb-2 sm:mb-0">
+            <h1 class="text-2xl sm:text-3xl not-visited:p-1"># </h1>
         </div>
-        <div class="text-center mt-5">
-          <h1 class="font-bold text-3xl md:text-5xl">Build or Create</h1>
-          <p class="text-base md:text-lg mt-2">
-            Build anything what u want,<br>
-            CodeTour is flexible. You have dream?<br>
-            Ready for that — let's build with CodeTour.
-          </p>
-          <a class="text-blue-400 border-b-2 border-blue-600 mt-3 inline-block" href="/html/country.html">Learning</a>
-        </div>
-        <div class="mt-16 md:mt-32 flex flex-col md:flex-row items-center justify-center gap-10">
-          <h1 class="text-xl md:text-3xl font-bold">Go Build</h1>
-          <a class="text-xl md:text-3xl font-bold bg-blue-400 px-6 py-2 rounded-lg text-gray-100 hover:bg-blue-600 transition" href="#">+ Build</a>
-        </div>
-      </div>
+        <p class="text-2xl sm:text-3xl font-bold">Why CodeTour Work?</p>
     </div>
+    <div class="mt-3 sm:mt-5">
+        <h2 class="text-xs sm:text-sm">CodeTour is Simple Sistem CodeTour Use JavaScript Html Css to Run And Tailwind those frameWork , <br> If you Lern more Lnaguage in there you should read before start to code if you not read you dont know how to code right. <br> After you read you type command what you doing on task</h2>
+        <p class="mt-5 sm:mt-10">How Sistem work , <br> we use html input and DOM javascript to manupulate html for better user Experience. <br> But now we handle to many request Bug What can you do for fix BUG buy just buy plan. Thats it</p>
+    </div>
+
+    <div class="intro flex flex-col sm:flex-row mt-10 sm:mt-20">
+        <div class="bg-gray-700 mr-0 sm:mr-5 rounded-b-lg mb-2 sm:mb-0">
+            <h1 class="text-2xl sm:text-3xl not-visited:p-1"># </h1>
+        </div>
+        <p class="text-2xl sm:text-3xl font-bold">Can I use those System?</p>
+    </div>
+    <div class="mt-3 sm:mt-5 sm:mr-72">
+        <h2 class="text-xs sm:text-sm">You Can use We system but you must have eula or agreement for that.</h2>
+        <div class="mockup-code w-full mt-5 sm:mt-10 text-xs sm:text-base">
+            <pre data-prefix="$"><code>git --version</code></pre>
+            <pre data-prefix=">" class="text-info"><code>git version 2.47.0.windows.2</code></pre>
+            <pre data-prefix="$"><code>git config --global user.name <span class="text-green-700">"Your name"</span></code></pre>
+            <pre data-prefix="$"><code>git config --global user.email <span class="text-green-700">"email@example.com"</span></code></pre>
+            <pre data-prefix="$"><code>git clone <span class="text-blue-600">https://github.com/SAKA-LG/CodeTour.git</span></code></pre>
+            <pre data-prefix=">" class="text-success"><code>success clone repository</code></pre>
+        </div>
+    </div>
+
+    <div class="intro flex flex-col sm:flex-row mt-10 sm:mt-20">
+        <div class="bg-gray-700 mr-0 sm:mr-5 rounded-b-lg mb-2 sm:mb-0">
+            <h1 class="text-2xl sm:text-3xl not-visited:p-1"># </h1>
+        </div>
+        <p class="text-2xl sm:text-3xl font-bold">Why Me should use CodeTour?</p>
+    </div>
+    <div class="mt-3 sm:mt-5">
+        <ul class="list-disc pl-5">
+            <li>CodeTour is flexsible for new user</li>
+            <li>Friendly user interface and user experience</li>
+            <li>Many language program can you use free</li>
+            <li>Beautiful Design looks good</li>
+            <li>We care all for you</li>
+        </ul>
+        <h1 class="text-base sm:text-lg font-medium mt-5">When you dont use CodeTour?</h1>
+        <ul class="list-disc pl-5">
+            <li>if you are profesional stack</li>
+            <li>if you seriuse abot learning CodeTour is fun place you play and learn</li>
+            <li>if your sofwere engineering</li>
+        </ul>
+    </div>
+</section>
+
 
     <footer class="bg-[#0B0C2A] py-12 text-white mt-20">
       <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-sm md:text-lg px-6">
@@ -136,7 +188,7 @@
       </div>
       <div class="text-center text-xs md:text-sm mt-8 text-gray-500">© 2025 CodeTour, Inc. · <a href="#" class="underline">Terms</a> · <a href="#" class="underline">Privacy Policy</a></div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       document.getElementById('mobile-menu-btn').addEventListener('click', function () {

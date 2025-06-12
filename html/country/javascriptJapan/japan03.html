@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/src/asset/book.png" type="image/png" />
+  <title>Pixel Console Exercise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    body {
+      font-family: 'Press Start 2P', cursive;
+    }
+    .pixel-border {
+      border: 4px solid #000;
+      box-shadow: 4px 4px 0 #000;
+    }
+  </style>
+</head>
+<body class="bg-[#1e1e2f] text-white flex flex-row h-screen overflow-hidden">
+
+      <div class="w-1/2 flex items-center rounded-r-2xl bg-gray-900 justify-center p-10">
+        <div class="text-center">
+          <h2 class="text-yellow-300 text-2xl mb-4  pixel-border">Welcome to <span class="text-pink-400">Osaka</span></h2>
+          <p class="text-white text-sm mt-6 leading-relaxed max-w-md">
+           Di Osaka kita akan merasakan kota modern, sejarah , dan kuliner 
+          </p>
+          <p class="text-start mt-3"># Operator Aritmatika</p>
+          <p class="text-start text-sm mt-3">Di sini kalian harus berfikir tinggi <br> seperti gedung floating garden di osaka.
+        </p>
+                <span class="text-start">
+            <li>+ = tambah</li>
+            <li>- = kurang</li>
+            <li>* = kali</li>
+            <li>/ = bagi</li>
+            <li>% = Modulus</li>
+            <li>++ = increment</li>
+            <li>-- = decrement</li>
+            </span>
+            <p class="text-start mt-3"># Contoh Operator</p>
+              <p class="text-start text-sm mt-3">
+                Berikut gabungan tipe data dengan aritmatika: <br>
+                let a = 10, let b = 5 <br>
+                console.log('a + b') <br>
+                output >15
+        </p>
+        </div>
+      </div>
+    
+      <div class="w-1/2 p-6 flex flex-col h-full">
+        <h1 class="text-yellow-400 text-xl pixel-border px-4 py-2 bg-[#2b2b3d] inline-block">
+          JavaScript Console
+        </h1>
+    
+        <div class="mt-10 mb-2">CONSOLE</div>
+        <div id="editor" class="h-48 pixel-border text-black"></div>
+    
+        <div class="flex gap-4 mt-4">
+          <button id="saves" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white text-sm pixel-border">Save</button>
+          <button id="reset" onclick="resetAll()" class="bg-red-600 hover:bg-red-700 px-4 py-2 text-white text-sm pixel-border">Reset</button>
+          <button onclick="next()" class="bg-green-600 hover:bg-amber-700 px-4 py-2 text-white text-sm pixel-border">Next</button>
+        </div>
+    
+        <div class="mt-6">
+          <h2 class="text-white text-sm mb-2">Output:</h2>
+          <div id="output" class="bg-black text-green-400 p-4 pixel-border overflow-auto h-32 text-sm font-mono"></div>
+        </div>
+      </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs/loader.min.js"></script>
+  <script>
+    let editor;
+
+    require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs' }});
+    require(['vs/editor/editor.main'], function () {
+      editor = monaco.editor.create(document.getElementById('editor'), {
+        value: `console.log("Hello Japan!");`,
+        language: 'javascript',
+        theme: 'vs-dark',
+        fontSize: 12,
+        minimap: { enabled: false }
+      })
+    })
+
+    document.getElementById('saves').addEventListener('click', function () {
+      const outputDiv = document.getElementById('output')
+      outputDiv.innerHTML = ''
+
+      const originalLog = console.log;
+      console.log = function (...args) {
+        args.forEach(arg => {
+          outputDiv.innerHTML += `<div>> ${arg}</div>`
+        })
+        originalLog.apply(console, args)
+      }
+
+      try {
+        const userCode = editor.getValue();
+        new Function(userCode)()
+      } catch (err) {
+        outputDiv.innerHTML += `<div class="text-red-500">Error: ${err.message}</div>`;
+      }
+
+      console.log = originalLog
+    })
+
+    function resetAll() {
+      if (editor) editor.setValue('')
+      document.getElementById('output').innerHTML = ''
+    }
+
+    function complite() {
+      alert("Latihan selesai! (simulasi)")
+    }
+
+    function next () {
+        window.location.href = '/html/country/javascriptJapan/japan04.html'
+    }
+  </script>
+</body>
+</html>

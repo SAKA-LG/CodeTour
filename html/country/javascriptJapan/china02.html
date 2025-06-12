@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" href="/src/asset/book.png" type="image/png" />
-  <title>Pixel Console Exercise</title>
+  <title>Pixel Console Exercise - HTML</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -18,8 +18,7 @@
 </head>
 <body class="bg-[#1e1e2f] text-white flex flex-row h-screen overflow-hidden">
 
-    
-  <div id="backgroundJapan" class="w-1/2 bg-cover bg-center relative" style="background-image: url('/src/img/d16ql-ezgif.com-crop.gif');">
+    <div id="backgroundJapan" class="w-1/2 bg-cover bg-center relative" style="background-image: url('/src/pixelBg/china1.gif');">
     <div id="slots" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-4">
       <div class="img-slot flex items-start text-center justify-center text-black font-bold" id="slot0"></div>
     </div>
@@ -27,20 +26,20 @@
 
   <div class="w-1/2 p-6 flex flex-col h-full">
     <h1 id="title" class="text-yellow-400 text-xl pixel-border px-4 py-2 bg-[#2b2b3d] inline-block">
-    0.1 Console & Tipe Data
+    0.1 tag element & atribute
     </h1>
 
         <div class="bg-[#2d2d44] text-white text-lg mt-4 pixel-border p-4">
       <pre><code id="task">// Task:
-    // output popUp "Hello Japan"
-    // buat const a 'Hello World' lalu console log
+    // buat h1 'Hello world'
+    // buat button dengan atribute type button 'click'
     // lalu tekan untuk menjalankan</code></pre>
     </div>
 
-    <div class="mt-5 mb-2">CONSOLE</div>
-    <div id="editor" class="h-52 pixel-border text-black"></div>
+    <div class="h-32 mb-2">HTML CONSOLE</div>
+    <div id="editor" class="pb-10 pixel-border text-black"></div>
 
-    <div class="flex gap-4 mt-4">
+    <div class="flex gap-4 mt-2">
       <button id="saves" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white text-sm pixel-border">Save</button>
       <button id="reset" onclick="resetAll()" class="bg-red-600 hover:bg-red-700 px-4 py-2 text-white text-sm pixel-border">Reset</button>
       <button onclick="next()" class="bg-green-600 hover:bg-amber-700 px-4 py-2 text-white text-sm pixel-border">Next</button>
@@ -48,59 +47,38 @@
 
     <div class="mt-6">
       <h2 class="text-white text-sm mb-2">Output:</h2>
-      <div id="output" class="bg-black text-green-400 p-4 pixel-border overflow-auto h-24 text-sm font-mono"></div>
+      <iframe id="preview" class="bg-white pixel-border w-full h-40"></iframe>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs/loader.min.js"></script>
   <script>
     let editor;
-
-    require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs' }});
+    require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs' } });
     require(['vs/editor/editor.main'], function () {
       editor = monaco.editor.create(document.getElementById('editor'), {
-        value: `console.log("Hello Japan!");`,
-        language: 'javascript',
+        value: `<h1>selamat bekerja</h1>`,
+        language: 'html',
         theme: 'vs-dark',
         fontSize: 12,
         minimap: { enabled: false }
-      })
-    })
+      });
+    });
+
 
     document.getElementById('saves').addEventListener('click', function () {
-      const outputDiv = document.getElementById('output')
-      outputDiv.innerHTML = ''
-
-      const originalLog = console.log;
-      console.log = function (...args) {
-        args.forEach(arg => {
-          outputDiv.innerHTML += `<div>> ${arg}</div>`
-        })
-        originalLog.apply(console, args)
-      }
-
-      try {
-        const userCode = editor.getValue();
-        new Function(userCode)()
-      } catch (err) {
-        outputDiv.innerHTML += `<div class="text-red-500">Error: ${err.message}</div>`;
-      }
-
-      console.log = originalLog
-    })
-
+      const previewFrame = document.getElementById('preview');
+      const htmlContent = editor.getValue();
+      previewFrame.srcdoc = htmlContent;
+    });
 
     function resetAll() {
-      if (editor) editor.setValue('')
-      document.getElementById('output').innerHTML = ''
+      if (editor) editor.setValue('');
+      document.getElementById('preview').srcdoc = '';
     }
 
-    function complite() {
-      alert("Latihan selesai! (simulasi)")
-    }
-
-    function next () {
-        window.location.href = '/html/country/javascriptJapan/japan03.html'
+    function next() {
+      window.location.href = '/html/complite.html';
     }
   </script>
 </body>
